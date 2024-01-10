@@ -67,7 +67,7 @@ class HuskStandalone(DeadlinePlugin):
 
     def RenderExecutable(self):
         """Return render executable path"""
-        return self.GetConfigEntry("USD_RenderExecutable")
+        return self.GetRenderExecutable("USD_RenderExecutable")
 
     def RenderArgument(self):
         """Return arguments that go after the filename in the render command"""
