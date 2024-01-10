@@ -36,3 +36,97 @@ Index=2
 Description="for USD we are unsure whether we need this?"
 Required=false
 DisableIfBlank=true
+
+[Renderer]
+Type=label
+Label=Renderer
+Category=Rendering
+Index=0
+Description=The USD Hydra Delegate renderer to use for rendering.
+Required=false
+DisableIfBlank=true
+
+[RenderSettings]
+Type=label
+Label=Render Settings Prim Path
+Category=Rendering
+Index=0
+Description=The Render Settings Prim Path to use as Render Settings, defaults to "/Render/rendersettings" when not set.
+Required=false
+DisableIfBlank=true
+
+[Purpose]
+Type=label
+Label=Purpose
+Category=Rendering
+Index=0
+Description=The USD Hydra Delegate renderer to use for rendering.
+Required=false
+DisableIfBlank=true
+
+[Complexity]
+Type=label
+Label=Complexity
+Category=Rendering
+Index=0
+Description=The USD Hydra Delegate renderer to use for rendering.
+Required=false
+DisableIfBlank=true
+
+[Snapshot]
+Type=integer
+Minimum=-1
+Maximum=3600
+Label=Snapshot
+Category=Rendering
+Index=0
+Description=Save a snapshot of the current state of the rendered image every 'x' seconds. -1 means no snapshots. Default is -1.
+Required=false
+DisableIfBlank=true
+
+[PreRender]
+Type=filename
+Label=PreRender
+Category=Rendering
+Index=0
+Description=Pre-Render script to run.
+Required=false
+DisableIfBlank=true
+
+[PreFrame]
+Type=filename
+Label=PreFrame
+Category=Rendering
+Index=0
+Description=Pre-frame script to run.
+Required=false
+DisableIfBlank=true
+
+[PostFrame]
+Type=filename
+Label=PostFrame
+Category=Rendering
+Index=0
+Description=Post-frame script to run.
+Required=false
+DisableIfBlank=true
+
+[PostRender]
+Type=filename
+Label=PostRender
+Category=Rendering
+Index=0
+Description=Post-Render script to run.
+Required=false
+DisableIfBlank=true
+
+[RestartDelegate]
+Type=integer
+Minimum=0
+Maximum=5
+Label=Restart Delegate
+Category=Rendering
+Index=0
+Description=Normally, husk uses USD delta operations to make multiple frame rendering more efficient. The delegate is only told about scene data that changes frame-to-frame so it can share work between frames. Using this option will cause the render delegate to be restarted every n frames. For example specifying 1 will cause the render delegate to be restarted every frame. Specifying 3 will use USD deltas for 3 frames, then restart the delegate before rendering the 4th frame. A value of 0 (the default) will never restart the delegate. Since restarting the delegate will cause the scene to be rebuilt, using this option can have significant performance impact and should only be used if truly required.
+Required=false
+DisableIfBlank=true
