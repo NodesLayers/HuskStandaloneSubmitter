@@ -49,6 +49,7 @@ def CleanupDeadlinePlugin(deadlinePlugin):
 
 class HuskStandalone(DeadlinePlugin):
     def __init__(self):
+        super(HuskStandalone, self).__init__()
         self.InitializeProcessCallback += self.InitializeProcess
         self.RenderExecutableCallback += self.RenderExecutable
         self.RenderArgumentCallback += self.RenderArgument
