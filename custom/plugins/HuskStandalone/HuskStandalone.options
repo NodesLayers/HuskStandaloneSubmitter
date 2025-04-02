@@ -5,7 +5,8 @@ Category=Scene File
 Index=0
 Description=The scene filename as it exists on the network
 Required=true
-DisableIfBlank=true
+DisableIfBlank=false
+Default=
 
 [OutputFile]
 Type=filenameSave
@@ -13,8 +14,9 @@ Label=Output
 Category=Rendering Options
 Index=0
 Description=The output filename path
-Required=false
-DisableIfBlank=true
+Required=true
+DisableIfBlank=false
+Default=
 
 [Threads]
 Type=integer
@@ -25,7 +27,8 @@ Category=Rendering Options
 Index=1
 Description=The number of rendering threads (0 for system processor count)
 Required=false
-DisableIfBlank=true
+DisableIfBlank=false
+Default=
 
 [Build]
 Type=enum
@@ -35,7 +38,8 @@ Category=Rendering Options
 Index=2
 Description="for USD we are unsure whether we need this?"
 Required=false
-DisableIfBlank=true
+DisableIfBlank=false
+Default=
 
 [Version]
 Type=label
@@ -43,8 +47,9 @@ Label=Version
 Category=Husk Version
 Index=0
 Description=Husk Version.
-Required=false
-DisableIfBlank=true
+Required=true
+DisableIfBlank=false
+Default=20.5
 
 [Renderer]
 Type=label
@@ -53,7 +58,8 @@ Category=Rendering
 Index=0
 Description=The USD Hydra Delegate renderer to use for rendering.
 Required=false
-DisableIfBlank=true
+DisableIfBlank=false
+Default=
 
 [RenderSettings]
 Type=label
@@ -62,7 +68,8 @@ Category=Rendering
 Index=0
 Description=The Render Settings Prim Path to use as Render Settings, defaults to "/Render/rendersettings" when not set.
 Required=false
-DisableIfBlank=true
+DisableIfBlank=false
+Default=
 
 [Purpose]
 Type=label
@@ -71,7 +78,8 @@ Category=Rendering
 Index=0
 Description=The USD Hydra Delegate renderer to use for rendering.
 Required=false
-DisableIfBlank=true
+DisableIfBlank=false
+Default=
 
 [Complexity]
 Type=label
@@ -80,7 +88,8 @@ Category=Rendering
 Index=0
 Description=The USD Hydra Delegate renderer to use for rendering.
 Required=false
-DisableIfBlank=true
+DisableIfBlank=false
+Default=
 
 [Snapshot]
 Type=integer
@@ -90,8 +99,9 @@ Label=Snapshot
 Category=Rendering
 Index=0
 Description=Save a snapshot of the current state of the rendered image every 'x' seconds. -1 means no snapshots. Default is -1.
-Required=false
-DisableIfBlank=true
+Required=true
+DisableIfBlank=false
+Default=
 
 [PreRender]
 Type=filename
@@ -99,8 +109,9 @@ Label=PreRender
 Category=Rendering
 Index=0
 Description=Pre-Render script to run.
-Required=false
-DisableIfBlank=true
+Required=true
+DisableIfBlank=false
+Default=
 
 [PreFrame]
 Type=filename
@@ -108,8 +119,9 @@ Label=PreFrame
 Category=Rendering
 Index=0
 Description=Pre-frame script to run.
-Required=false
-DisableIfBlank=true
+Required=true
+DisableIfBlank=false
+Default=
 
 [PostFrame]
 Type=filename
@@ -117,8 +129,9 @@ Label=PostFrame
 Category=Rendering
 Index=0
 Description=Post-frame script to run.
-Required=false
-DisableIfBlank=true
+Required=true
+DisableIfBlank=false
+Default=
 
 [PostRender]
 Type=filename
@@ -126,5 +139,6 @@ Label=PostRender
 Category=Rendering
 Index=0
 Description=Post-Render script to run.
-Required=false
-DisableIfBlank=true
+Required=true
+DisableIfBlank=false
+Default=
