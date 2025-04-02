@@ -124,6 +124,10 @@ class HuskStandalone(DeadlinePlugin):
             if value:
                 arguments.append(f"--{husk_flag} {value}")
 
+        # List the licenses that are available to be checked by husk and the licenses that will be checked by husk.
+        if self.GetBooleanPluginInfoEntryWithDefault("ListLicenseChecks", True):
+            arguments.append("--list-license-checks")
+
         # Default to restart delegate every frame since it's much more reliable
         # e.g. arnold just doesn't update per frame otherwise
         arguments.append("--restart-delegate 1")
